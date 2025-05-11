@@ -3,35 +3,49 @@
 <head>
   <style>
     body {
-      margin: 0;
-      font-family: sans-serif;
-      padding: 10px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 40px;
     }
-    .progress-container {
-      width: 100%;
-      background-color: #e0e0e0;
-      border-radius: 10px;
+    .status-label {
+      display: inline-block;
+      background-color: limegreen;
+      color: black;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .progress-box {
+      width: 300px;
       height: 24px;
-      box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+      border: 1px solid #333;
+      margin: 20px auto;
+      display: flex;
+      background-color: white;
     }
-    .progress-bar {
-      width: 70%;
-      height: 100%;
-      background-color: #107c10;
-      border-radius: 10px;
-      transition: width 0.5s ease;
+    .progress-fill {
+      background-color: #00a651;
+      width: 70%; /* Adjust progress here */
     }
-    .progress-text {
-      text-align: right;
-      margin-top: 6px;
-      font-weight: 600;
+    .progress-remaining {
+      flex-grow: 1;
+    }
+    .percentage {
+      font-size: 24px;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <div class="progress-container">
-    <div class="progress-bar"></div>
+  <div>Status: <span class="status-label">On track</span></div>
+  <div style="margin-top: 8px; font-size: 16px;">Overall Progress</div>
+  <div class="percentage">70%</div>
+
+  <div class="progress-box">
+    <div class="progress-fill"></div>
+    <div class="progress-remaining"></div>
   </div>
-  <p class="progress-text">Progress: 70%</p>
 </body>
 </html>
+
