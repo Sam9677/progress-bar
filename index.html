@@ -26,10 +26,8 @@
     }
     .progress-fill {
       background-color: #00a651;
-      width: 64%; /* Adjust progress here */
-    }
-    .progress-remaining {
-      flex-grow: 1;
+      width: 64%; 
+      transition: width 0.5s ease;
     }
     .percentage {
       font-size: 24px;
@@ -44,8 +42,7 @@
 
   <div class="progress-box">
     <div class="progress-fill"></div>
-    <div class="progress-remaining"></div>
+    <div style="flex-grow: 1;"></div>
   </div>
 </body>
 </html>
-
